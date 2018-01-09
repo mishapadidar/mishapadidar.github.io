@@ -1,0 +1,106 @@
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .card-vertical-image {
+    display: flex;
+    height: 400px;
+
+  }
+  .card-vertical-image img{
+    width:90%;
+    max-width:400px;
+    margin:auto;
+    vertical-align:middle;
+  }
+  .card-vertical-info {
+    padding-left:0;
+  }
+  #cardInfo {
+    margin-left:0;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+  .card-vertical-image img{
+    width: 90%;
+    display:flex;
+    margin-left: auto;
+    margin-right:auto;
+    vertical-align:middle;
+  }
+  .card-vertical-info {
+    padding-left:0;
+  }
+  #cardInfo {
+    margin-left:0;
+  }
+  .card-vertical-tags{
+    display:block;
+    text-align:right;
+    width:100%;
+    font-size:12px;
+    letter-spacing:0.5px;
+    padding:0;
+    margin:0;
+    font-weight:bold;
+    
+  }
+  .card-vertical-info h2{
+    font-size:30px;
+  }
+   .card-vertical-info h3{
+    font-size:24px;
+  }
+  .header{
+    display: flex;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  #name{
+    text-align:left;
+    display: inline;
+    width: 50%;
+    margin-top:40px;
+    font-size:26px;
+  }
+  #nav {
+    text-align:right;
+  }
+ #stupid {
+    padding:60px;
+ }
+  .catchPhrase {
+    display:block;
+    padding-bottom:50px;
+    margin:0 auto;
+    max-width:540px;
+    
+  }
+  #catchPhrase h3{
+    font-size:26px;
+    font-weight:bold;
+    font-style:normal;
+    display:block;
+    text-align:center;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

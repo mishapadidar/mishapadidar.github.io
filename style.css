@@ -1,0 +1,257 @@
+
+/* General
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size:20px;
+    padding:5px;
+}
+h1,h2 {
+    font-weight:bold;
+}
+h3 {
+    font-size:16px;
+    font-weight:lighter;
+    font-style:italic;
+}
+h4 {
+  font-size:28px;
+  font-weight:bold;
+}
+p {
+    font-size:14px;
+    line-height:20px;
+    color:#999;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight:lighter;
+    font-size: 14px;
+}
+a:hover{
+    color:grey;
+}
+
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header{
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+#name {
+    font-family: 'Roboto', sans-serif;
+    font-size:26px;
+    
+    font-weight:bold;
+    max-width:200px;
+}
+#nav {
+  width: 100%;
+  padding:0;
+  list-style:none;
+  font-family: 'Roboto', sans-serif;
+  font-size:12px;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+#nav:nth-child(3){padding-right:0}
+#nav li{
+  display:inline;
+  color:#999;;
+  font-weight:bold;
+}
+#nav a{
+    font-weight:bold;
+    font-size:20px;
+}
+#stupid {
+  padding:20px;
+}
+#projectsLink{
+  font-weight:bold;
+  color:Black;
+}
+.catchPhrase{
+  width:100%;
+  text-align:center;
+  margin-bottom:40px;
+}
+#catchPhrase h3{
+  font-style:normal;
+  font-weight:bold;
+  font-size:20px;
+  text-align:left;
+  letter-spacing:0.5px;
+  line-height:140%;
+}
+
+
+/* Cards
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card-vertical{
+    width:100%;
+    border-radius: 2px;
+    margin: 0 auto;
+    margin-bottom:70px;
+    box-shadow: 0 14px 28px rgba(154,197,235,.7), 2px 40px 80px rgba(154,197,235,.3);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    float: left;
+}
+.card-vertical-image{
+    width: 100%;
+    padding-left:10px;
+    padding-top:20px;
+}
+.card-vertical-image img{
+    width: 70%;
+    display:block;
+    margin:auto;
+}
+.card-vertical-info{
+    padding: 20px;
+    margin-top:20px;
+    margin-left:40px;
+    margin-bottom:50px;
+}
+.card-vertical-info h3{
+  font-style:oblique;
+}
+.card-vertical-info p{
+  line-height:30px;
+}
+.card-vertical-link {
+    text-align:center;
+}
+#readMore {
+    border:2px;
+    border-style:solid;
+    border-radius:15px;
+    padding:1em;
+    text-align:center;
+}
+.card-vertical-tags{
+  display:none;
+}
+
+
+/* About
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#aboutText {
+  color:black;
+}
+#aboutPhoto {
+  height:250px;
+  padding-left:0px;
+}
+#aboutPhoto img{
+  border-radius:50%;
+  max-width:220px;
+}
+#aboutInfo {
+  padding-left:0px;
+  margin-left:0px;
+}
+
+/* Clusters Project Page
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#clusters-info {
+  padding-top:160px;
+  padding-bottom:0px;
+}
+.clusters-tags{
+ text-align:left;
+ padding:0px;
+ margin-top:12px;
+ margin-bottom:12px;
+ font-size:16px;
+ font-weight:bold;
+}
+
+.clusters-link{
+  text-align:left;
+}
+
+#readPaper {
+  font-weight:bold;
+  letter-spacing:0.5px;
+}
+
+#clusters-description{
+  color:black;
+  line-height:30px;
+  text-align:left;
+}
+
+#title{
+  font-size:34px;
+  margin-bottom:8px;
+  text-align:left;
+}
+
+#subTitle{
+  font-size:25px;
+  font-style:oblique;
+  text-align:left;
+}
+
+#horizontal-line{
+  height:1px;
+  color:LightGray;
+  background-color:LightGray;
+}
+
+
+.clusters-videos {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.videoContainer {
+  width:100%;
+  margin-bottom:20px;
+}
+
+.video {
+  width:100%;
+}
+
+.caption {
+  color:black;
+  line-height:25px;
+  text-align:center;
+  padding-top:10px;
+  padding-left:20px;
+  padding-right:20px;
+  font-style:oblique;
+}
+
+
+
+/* Swimmers Project Page
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#swimmer-video {
+  margin:0 auto;
+}
+#swimmer-video-container {
+  max-width:75%;
+  margin:0 auto;
+  
+}
+
+/* Spectrin Project Page
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#spectrinImg {
+  width:50%;
+  margin:0px auto;
+}
