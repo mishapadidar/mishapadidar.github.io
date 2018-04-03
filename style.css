@@ -77,10 +77,11 @@ a:hover{
 #stupid {
   padding:20px;
 }
-#projectsLink{
+.currentHeaderLink{
   font-weight:bold;
   color:Black;
 }
+    
 .catchPhrase{
   width:100%;
   text-align:center;
