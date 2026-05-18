@@ -1,322 +1,152 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1;">
-  <title>Misha's Website</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" type="text/css" href="./skeleton-james.css">
-  <link rel="stylesheet" type="text/css" href="./style.css">
-  <link rel="stylesheet" type="text/css" href="./media.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misha Padidar — Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          },
+          boxShadow: {
+            'blue': '0 14px 28px rgba(154,197,235,.3), 2px 60px 120px rgba(154,197,235,.3)',
+          }
+        }
+      }
+    }
+  </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 </head>
+<body class="m-auto flex min-h-screen max-w-7xl flex-col bg-white px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32">
 
-<body>
-  <div class="container">
-    <div class="twelve columns">
-      <div id="header" class="header">
-        <a id="name" href="./index.html">Misha Padidar</a>
-        <ul id="nav">
-          <li ><a id="projectsLink" class="currentHeaderLink" href="./projects.html">Projects</a></li>
-          <li id="stupid"><a href="./index.html">About</a></li>
-          <li><a href="mailto:mishapadidar14@gmail.com?subject=Important Mail From Website">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+  <header class="py-6 font-semibold text-neutral-900 sm:py-10">
+    <nav class="flex items-center justify-between">
+      <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="./index.html">Misha Padidar</a>
 
-    <div id="Diffusion For Fusion" class="card-vertical">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='diffusion_for_fusion.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Diffusion For Fusion</h2>
-            <h3>Designing Stellarators with Generative AI</h3>
-            <p>
-            Stellarators are a prospective class of fusion-based power plants that confine a hot plasma with three-dimensional magnetic fields.
-            We show that stellarators can be designed using Denoising Diffusion models, a class of generative models commonly used for image generation.
-            </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="https://openreview.net/forum?id=DQs4QvbCwn#discussion"> Accepted To NeurIPS AI4Science Workshop, 2025 &#8250;</a>
-            </div>
-          </div>
+      <!-- Mobile hamburger -->
+      <div class="sm:hidden">
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <label for="menu-toggle" class="cursor-pointer hover:text-primary-600">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 fill-current"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+        </label>
+        <div class="hidden peer-checked:flex fixed inset-0 z-50 bg-white flex-col px-6 py-6">
+          <label for="menu-toggle" class="self-end cursor-pointer hover:text-primary-600 mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-5 h-5 fill-current"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+          </label>
+          <ul class="list-none flex flex-col gap-6 text-xl">
+            <li><label for="menu-toggle"><a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="./projects.html">projects</a></label></li>
+            <li><label for="menu-toggle"><a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="./index.html">about</a></label></li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <div id="STARLite1" class="card-vertical">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='starlite.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>STAR_Lite</h2>
-            <h3>A Laboratory-Scale Stellarator for Fusion Energy at Hampton University</h3>
-            <p>
-            We introduce the STAR_Lite Stellarator, a labratory-scale device for studying non-resonant divertors. STAR_Lite is under construction at Hampton University.
-            </p>
-            <div class="card-vertical-link">
-              <a id="readMore"> Submitted to Journal of Plasma Physics &#8250;</a>
-            </div>
-          </div>
-        </div>
+      <!-- Desktop nav -->
+      <ul class="hidden sm:flex list-none flex-row gap-7">
+        <li><a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="./projects.html">projects</a></li>
+        <li><a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="./index.html">about</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="grow">
+
+    <div class="flex flex-col sm:flex-row gap-6 mb-12 shadow-blue rounded-lg overflow-hidden">
+      <div class="sm:w-52 shrink-0 flex items-center justify-center p-6">
+        <img src="graphics/diffusion_for_fusion.png" class="max-h-40 w-full object-contain" alt="Diffusion For Fusion">
+      </div>
+      <div class="flex flex-col justify-center p-6">
+        <h2 class="text-xl font-bold mb-1">Diffusion For Fusion</h2>
+        <p class="text-neutral-500 italic mb-3 text-base">Designing Stellarators with Generative AI</p>
+        <p class="text-base text-neutral-700 mb-4">Stellarators are a prospective class of fusion-based power plants that confine a hot plasma with three-dimensional magnetic fields. We show that stellarators can be designed using Denoising Diffusion models, a class of generative models commonly used for image generation.</p>
+        <a class="font-semibold hover:underline text-sm" style="color: rgb(36, 129, 211);" href="https://openreview.net/forum?id=DQs4QvbCwn#discussion">Appears In NeurIPS AI4Science Workshop, 2025 ›</a>
       </div>
     </div>
 
-    <div id="Variational Inference" class="card-vertical">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='hensman_vi_classification.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Variational Inference</h2>
-            <h3>Scaling Gaussian Processes with Derivatives</h3>
-            <p>
-            Augmenting Gaussian Processes (GP) with derivative information can significantly enhance their predicitive capacity. However, there are serious scalability issues associated with training and inference when using GPs with derivatives, particularly in high dimensions. We developed a Variational Inference technique for training GPs with derivatives that learns a reduced GP model, allowing for scalable training and inference at a minimal loss in accuracy.
-            </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="https://proceedings.neurips.cc/paper/2021/hash/32bbf7b2bc4ed14eb1e9c2580056a989-Abstract.html"> Accepted To NeurIPS 2021 &#8250;</a>
-            </div>
-          </div>
-        </div>
+    <div class="flex flex-col sm:flex-row gap-6 mb-12 shadow-blue rounded-lg overflow-hidden">
+      <div class="sm:w-52 shrink-0 flex items-center justify-center p-6">
+        <img src="graphics/starlite.png" class="max-h-40 w-full object-contain" style="mix-blend-mode: multiply;" alt="STAR_Lite">
+      </div>
+      <div class="flex flex-col justify-center p-6">
+        <h2 class="text-xl font-bold mb-1">STAR_Lite</h2>
+        <p class="text-neutral-500 italic mb-3 text-base">A Laboratory-Scale Stellarator for Fusion Energy at Hampton University</p>
+        <p class="text-base text-neutral-700 mb-4">We introduce the STAR_Lite Stellarator, a laboratory-scale device for studying non-resonant divertors. STAR_Lite is under construction at Hampton University.</p>
+        <a class="font-semibold hover:underline text-sm" style="color: rgb(36, 129, 211);" href="https://arxiv.org/pdf/2603.18265">Submitted to Journal of Plasma Physics ›</a>
       </div>
     </div>
 
-
-    <div id="Accelerator" class="card-vertical">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='synchrotron.jpg'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Particle Accelerators</h2>
-            <h3>Derivative-Free Optimization of a Rapid-Cycling Synchrotron</h3>
-            <p>
-              <a href="https://www.fnal.gov/", style="font-weight: bold;">Fermilab</a> houses a proton accelerator to be used as a part of <a href="https://www.dunescience.org/", style="font-weight: bold;">Deep Underground Neutrino Experiment (DUNE)</a>,  an international, multi-decadal physics program for leading-edge neutrino science and proton decay studies. However by the inception of DUNE in 2032, the FermiLab proton complex must undergo a substantial upgrade in order to meet the particle acclerator beam power requirements. I developed and solved a derivative-free optimization model which seeks these high power accelerator configurations. 
-            </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="https://arxiv.org/abs/2108.04774"> Accepted To Optimization and Engineering &#8250;</a>
-            </div>
-          </div>
-        </div>
+    <div class="flex flex-col sm:flex-row gap-6 mb-12 shadow-blue rounded-lg overflow-hidden">
+      <div class="sm:w-52 shrink-0 flex items-center justify-center p-6">
+        <img src="graphics/hensman_vi_classification.png" class="max-h-40 w-full object-contain" alt="Variational Inference">
+      </div>
+      <div class="flex flex-col justify-center p-6">
+        <h2 class="text-xl font-bold mb-1">Variational Inference</h2>
+        <p class="text-neutral-500 italic mb-3 text-base">Scaling Gaussian Processes with Derivatives</p>
+        <p class="text-base text-neutral-700 mb-4">Augmenting Gaussian Processes (GP) with derivative information can significantly enhance their predictive capacity. However, there are serious scalability issues associated with training and inference when using GPs with derivatives, particularly in high dimensions. We developed a Variational Inference technique for training GPs with derivatives that learns a reduced GP model, allowing for scalable training and inference at a minimal loss in accuracy.</p>
+        <a class="font-semibold hover:underline text-sm" style="color: rgb(36, 129, 211);" href="https://proceedings.neurips.cc/paper/2021/hash/32bbf7b2bc4ed14eb1e9c2580056a989-Abstract.html">Appears In NeurIPS 2021 ›</a>
       </div>
     </div>
 
-    <div id="Unrelaxable" class="card-vertical">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='polytope.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Constrained Optimization</h2>
-            <h3>Modeling Approaches for Addressing Simple Unrelaxable Constraints with Unconstrained Optimization Methods</h3>
-            <p>
-            When optimizing chemical concentrations in a chemical system or probabilities of transmission in an epedemiological simulation, negative concentration levels and negative probabilities, respectively, are readily modeled as belonging to regions that an optimization algorithm should never probe. These constraints are known as unrelaxable constraints, constraints which must be satisfied in order to produce meaningful output of the objective. Solving optimization problems with unrelaxable constraints is difficult, and traditionally requires specialized algorithmic solutions. We have developed modeling approaches which open the doors to "off-the-shelf" optimization routines, such as BFGS, to solve optimization problems with simple unrelaxable constraints.
-            </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="https://arxiv.org/abs/2205.09627" >Accepted to Optimization Letters &#8250;</a>
-            </div>
-          </div>
-        </div>
+    <div class="flex flex-col sm:flex-row gap-6 mb-12 shadow-blue rounded-lg overflow-hidden">
+      <div class="sm:w-52 shrink-0 flex items-center justify-center p-6">
+        <img src="graphics/synchrotron.jpg" class="max-h-40 w-full object-contain" alt="Particle Accelerators">
+      </div>
+      <div class="flex flex-col justify-center p-6">
+        <h2 class="text-xl font-bold mb-1">Particle Accelerators</h2>
+        <p class="text-neutral-500 italic mb-3 text-base">Derivative-Free Optimization of a Rapid-Cycling Synchrotron</p>
+        <p class="text-base text-neutral-700 mb-4"><a class="font-semibold" style="color: rgb(36, 129, 211);" href="https://www.fnal.gov/">Fermilab</a> houses a proton accelerator to be used as a part of <a class="font-semibold" style="color: rgb(36, 129, 211);" href="https://www.dunescience.org/">Deep Underground Neutrino Experiment (DUNE)</a>, an international, multi-decadal physics program for leading-edge neutrino science and proton decay studies. However by the inception of DUNE in 2032, the FermiLab proton complex must undergo a substantial upgrade in order to meet the particle accelerator beam power requirements. I developed and solved a derivative-free optimization model which seeks these high power accelerator configurations.</p>
+        <a class="font-semibold hover:underline text-sm" style="color: rgb(36, 129, 211);" href="https://arxiv.org/abs/2108.04774">Appears In Optimization and Engineering ›</a>
       </div>
     </div>
 
-
-    <div id="Stellarator" class="card-vertical">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='stellarator.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Fusion Energy</h2>
-            <h3>Stochastic Optimization of Stellarator Coil Designs</h3>
-            <p>
-              The Stellarator is a state-of-the-art nuclear fusion device designed to generate sustainable energy. We are developing a stochastic optimization framework within FOCUS, an optimization toolbox for designing the magnetic coils for Stellarators. Our accelerated stochastic optimization methods allow for rapid development of coils with low construction tolerances, with the goal of saving millions of dollars in engineering costs.
-            </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="https://www.cambridge.org/core/journals/journal-of-plasma-physics/article/global-stochastic-optimization-of-stellarator-coil-configurations/7377A84A021E2643DD7EB9CB2F0D6F1E"> Accepted To The Journal of Plasma Physics &#8250;</a>
-            </div>
-          </div>
-        </div>
+    <div class="flex flex-col sm:flex-row gap-6 mb-12 shadow-blue rounded-lg overflow-hidden">
+      <div class="sm:w-52 shrink-0 flex items-center justify-center p-6">
+        <img src="graphics/polytope.png" class="max-h-40 w-full object-contain" alt="Constrained Optimization">
       </div>
-    </div>
-    
-     
-    <div id="Micro Structure" class="card-vertical">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='fluctHydro_field7_crop.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Microstructures</h2>
-            <h3>Fluctuating Hydrodynamics Methods for the Drift-Diffusion Dynamics of Microstructures</h3>
-            <p>
-              The goal of this project was to study the Drift-Diffusion Dyanamics of Microstructures embedded in spherical fluid interfaces. In nature we find that this is a good model for the interaction of proteins in the lipid-bilayer membrane (cell membrane). Throughout the project we developed fluctuating hydrodynamics approaches for capturing the fluid and microstructure interactions. We then used our model to study how the drift-diffusion dynamics of microstructures compare with and without hydrodynamic coupling within the curved fluid interface.
-            </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="https://www.sciencedirect.com/science/article/pii/S0021999122000560" >Accepted To The Journal of Computational Physics &#8250;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div id="Machine Learning" class="card-vertical" style="display: none;">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='gaussianProcess.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Machine Learning</h2>
-            <h3>Using Gaussian Process Regression to Solve the Heat Equation</h3>
-            <p>
-              We use a novel machine learning method, Gaussian Process Regression, to solve a classic problem, the heat equation. We aim to find the relationship between temperature at a position on a rod and the location of a heat source under the rod. This equation-free method greatly simplifies solving the partial differential equation and proves to be accurate even with small data samples.
-              </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="./gaussianProcessReport.pdf" >READ THE REPORT &#8250;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div id="Swimmers" class="card-vertical" style="display: none;">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='swimmers.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-           
-            <h2>Swimmers</h2>
-            <h3>Golestanian Swimmers in Spherical Fluid Interfaces</h3>
-            <p>
-              The Golestanian Swimmer is a three bead simple swimmer that leverages non-reciprocal motion to move through viscous media. Our three bead swimmer is propelled by the two oscillating harmonic springs that hold it together. Using computational simulation of these swimmers, we are able to investigate the role of fluid viscosity on the speed of the swimmers when moving through a spherical fluid interface.
-              </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="./swimmersProjectPage.html" >LEARN MORE &#8250;</a>
-            </div>
-          </div>
-        </div>
+      <div class="flex flex-col justify-center p-6">
+        <h2 class="text-xl font-bold mb-1">Constrained Optimization</h2>
+        <p class="text-neutral-500 italic mb-3 text-base">Modeling Approaches for Addressing Simple Unrelaxable Constraints with Unconstrained Optimization Methods</p>
+        <p class="text-base text-neutral-700 mb-4">When optimizing chemical concentrations in a chemical system or probabilities of transmission in an epidemiological simulation, negative concentration levels and negative probabilities, respectively, are readily modeled as belonging to regions that an optimization algorithm should never probe. These constraints are known as unrelaxable constraints, constraints which must be satisfied in order to produce meaningful output of the objective. Solving optimization problems with unrelaxable constraints is difficult, and traditionally requires specialized algorithmic solutions. We have developed modeling approaches which open the doors to "off-the-shelf" optimization routines, such as BFGS, to solve optimization problems with simple unrelaxable constraints.</p>
+        <a class="font-semibold hover:underline text-sm" style="color: rgb(36, 129, 211);" href="https://arxiv.org/abs/2205.09627">Accepted to Optimization Letters ›</a>
       </div>
     </div>
 
-    <div id="Spectral Clustering" class="card-vertical" style="display: none;">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='spectralClustering.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Community Detection</h2>
-            <h3>Understanding your Congress-person with Spectral Clustering</h3>
-            <p>
-              We implement spectral clustering and semi-supervised labeling techniques on a voting network created from the UCI Congressional Voting Records data set, with the goal of understanding the voting stance of Congressional Representatives. We find interestingly that many politicians vote more akin to their opposing party.
-            </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="./spectralClusteringReport.pdf" >LEARN MORE &#8250;</a>
-            </div>
-          </div>
-        </div>
+    <div class="flex flex-col sm:flex-row gap-6 mb-12 shadow-blue rounded-lg overflow-hidden">
+      <div class="sm:w-52 shrink-0 flex items-center justify-center p-6">
+        <img src="graphics/stellarator.png" class="max-h-40 w-full object-contain" alt="Fusion Energy">
+      </div>
+      <div class="flex flex-col justify-center p-6">
+        <h2 class="text-xl font-bold mb-1">Fusion Energy</h2>
+        <p class="text-neutral-500 italic mb-3 text-base">Stochastic Optimization of Stellarator Coil Designs</p>
+        <p class="text-base text-neutral-700 mb-4">The Stellarator is a state-of-the-art nuclear fusion device designed to generate sustainable energy. We are developing a stochastic optimization framework within FOCUS, an optimization toolbox for designing the magnetic coils for Stellarators. Our accelerated stochastic optimization methods allow for rapid development of coils with low construction tolerances, with the goal of saving millions of dollars in engineering costs.</p>
+        <a class="font-semibold hover:underline text-sm" style="color: rgb(36, 129, 211);" href="https://www.cambridge.org/core/journals/journal-of-plasma-physics/article/global-stochastic-optimization-of-stellarator-coil-configurations/7377A84A021E2643DD7EB9CB2F0D6F1E">Appears In The Journal of Plasma Physics ›</a>
       </div>
     </div>
-    
-    <div id="clusters" class="card-vertical" style="display: none;">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='switchModel3D.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Clusters</h2>
-            <h3>Self Assembly of Particle Clusters in Spherical Fluid Interfaces</h3>
-            <p>
-              Motivated by recent experimental systems where particles are immersed within curved two-dimensional fluid interfaces, such as colloids in a GUV’s or proteins in a lipid vesicle membrane, we investigate how active kinetics can modulate the size of particle clusters that self-assemble within spherical fluid interfaces.
-              </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="./clustersProjectPage.html" >LEARN MORE &#8250;</a>
-            </div>
-          </div>
-        </div>
+
+    <div class="flex flex-col sm:flex-row gap-6 mb-12 shadow-blue rounded-lg overflow-hidden">
+      <div class="sm:w-52 shrink-0 flex items-center justify-center p-6">
+        <img src="graphics/fluctHydro_field7_crop.png" class="max-h-40 w-full object-contain" alt="Microstructures">
+      </div>
+      <div class="flex flex-col justify-center p-6">
+        <h2 class="text-xl font-bold mb-1">Microstructures</h2>
+        <p class="text-neutral-500 italic mb-3 text-base">Fluctuating Hydrodynamics Methods for the Drift-Diffusion Dynamics of Microstructures</p>
+        <p class="text-base text-neutral-700 mb-4">The goal of this project was to study the Drift-Diffusion Dynamics of Microstructures embedded in spherical fluid interfaces. In nature we find that this is a good model for the interaction of proteins in the lipid-bilayer membrane (cell membrane). Throughout the project we developed fluctuating hydrodynamics approaches for capturing the fluid and microstructure interactions. We then used our model to study how the drift-diffusion dynamics of microstructures compare with and without hydrodynamic coupling within the curved fluid interface.</p>
+        <a class="font-semibold hover:underline text-sm" style="color: rgb(36, 129, 211);" href="https://www.sciencedirect.com/science/article/pii/S0021999122000560">Appears In The Journal of Computational Physics ›</a>
       </div>
     </div>
-    
-    <div id="multigrid" class="card-vertical" style="display: none;">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='multigrid.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-           
-            <h2>Multigrid</h2>
-            <h3>Using Multigrid to Solve the Poisson's Equation</h3>
-            <p>
-              As a ubiquitous equation in physical theory, Poisson's equation serves as the perfect testing ground for Multi-Grid Iterative PDE solvers. Multigrid is a state-of-the-art method for increasing the convergence rates of Iterative methods for solving linear systems. These methods are particularly effective when dealing with systems with sparse matrix representations, like the Poisson equation.
-              </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="./multigridReport.pdf" >READ THE REPORT &#8250;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div id="spectrin" class="card-vertical" style="display: none;">
-      <div class='row'>
-        <div class="four columns">
-          <div class="card-vertical-image">
-            <img src='spectrin.png'>
-          </div>
-        </div>
-        <div class="eight columns" id="cardInfo" >
-          <div class="card-vertical-info">
-            <h2>Networks</h2>
-            <h3>Polymeric Networks in Spherical Fluid Interfaces</h3>
-            <p>
-              While found in a variety of environments, the protein Spectrin is commonly found forming a scaffolding over the exterior of red blood cells. This scaffolding is called a Spectrin Network as the Spectrin proteins are connected by bonds forming a triangulated mesh. Motivated by the Spectrin Networks, we investigate the fluid interactions generated from generalized harmonic polymeric networks embedded in spherical fluid interfaces. We use CFD techniques to measure the significance effects of hydrodynamics.
-              </p>
-            <div class="card-vertical-link">
-              <a id="readMore" href="./spectrinProjectPage.html" >LEARN MORE &#8250;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
+
+  </main>
+
+  <footer class="py-10"></footer>
+
 </body>
 </html>
